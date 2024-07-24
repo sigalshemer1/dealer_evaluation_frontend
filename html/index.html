@@ -8,7 +8,7 @@
   <script>
     let produrl = "https://prodlist.1jrimz6xhtg0.us-south.codeengine.appdomain.cloud/";
     let dealerurl = "https://dealerdetails.1jrimz6xhtg0.us-south.codeengine.appdomain.cloud/";
-
+console.log("Starting");
     axios.get(produrl + "products").then(res => {
       let selEl = document.createElement("select");
       selEl.setAttribute("id", "selProd");
@@ -17,7 +17,7 @@
       defaultOpt.setAttribute('value', "--SELECT--");
       defaultOpt.innerText = "--SELECT--";
       selEl.appendChild(defaultOpt);
-
+console.log("Before products");
       res.data.products.forEach(element => {
         let optEl = document.createElement("option");
         optEl.setAttribute('value', element);
@@ -31,7 +31,7 @@ console.log(selEl);
       }
       prod.appendChild(selEl);
     });
-
+console.log("Before dealers");
     let getDealers = () => {
       let valToFetch = document.getElementById("selProd").value;
 
@@ -100,5 +100,4 @@ console.log(selEl);
     <div style='margin:6mm' id='dealers'></div>
     <div style='margin:6mm;font-size: large;' id='pricing'></div>
   </h1>
-  <h2>AAAAA</h2>
 </html>
