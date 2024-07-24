@@ -17,7 +17,7 @@
       defaultOpt.setAttribute('value', "--SELECT--");
       defaultOpt.innerText = "--SELECT--";
       selEl.appendChild(defaultOpt);
-
+console.log(selEl);
       res.data.products.forEach(element => {
         let optEl = document.createElement("option");
         optEl.setAttribute('value', element);
