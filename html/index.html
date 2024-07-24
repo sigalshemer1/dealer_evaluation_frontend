@@ -17,14 +17,14 @@
       defaultOpt.setAttribute('value', "--SELECT--");
       defaultOpt.innerText = "--SELECT--";
       selEl.appendChild(defaultOpt);
-console.log(selEl);
+
       res.data.products.forEach(element => {
         let optEl = document.createElement("option");
         optEl.setAttribute('value', element);
         optEl.innerText = element;
         selEl.appendChild(optEl);
       });
-
+console.log(selEl);
       let prod = document.getElementById('prod_dd');
       while (prod.firstChild) {
         prod.removeChild(prod.firstChild);
